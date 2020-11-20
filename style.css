@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ------------------ HEADER - SLIDER ----------------- */
+header {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+header>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: slider 15s linear infinite;
+}
+
+header>div.sliderMassage {
+    background-image: url("img/massage.jpg");
+}
+
+header>div.sliderSpa {
+    background-image: url("img/spa.jpg");
+    background-position: bottom center;
+    animation-delay: 5s;
+}
+
+header>div.sliderWellness {
+    background-image: url("img/wellness.jpg");
+    animation-delay: 10s;
+}
+
+header>div>h1 {
+    position: absolute;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'open sans', sans-serif;
+    color: white;
+    padding: 20px 60px;
+    animation: title 15s linear infinite both;
+    opacity: 0;
+}
+
+header>div.sliderMassage>h1 {
+    top: 30%;
+    right: 20%;
+}
+
+header>div.sliderSpa>h1 {
+    bottom: 10%;
+    left: 10%;
+    animation-delay: 5s;
+}
+
+header>div.sliderWellness>h1 {
+    top: 10%;
+    left: 35%;
+    animation-delay: 10s;
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    23.33% {
+        opacity: 1;
+    }
+
+    28.33% {
+        opacity: 0;
+    }
+
+    33.33% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slider {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    33.33% {
+        opacity: 1
+    }
+
+    38.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media(min-width: 1024px) {
+    header>div>h1 {
+        font-size: 50px;
+    }
+}
+
+/* < !--------------------- THERAPEUTIC SECTION-------------------------> */
+section.informations {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 10% 5%;
+    text-align: center;
+    background-color: #D4D959;
+}
+
+.informations h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: rgb(43, 43, 43);
+}
+
+.info {
+    width: 80%;
+    margin: 10% 3%;
+    margin: 0 auto;
+}
+
+.info img {
+    display: block;
+    height: 60vw;
+    width: 60vw;
+    margin: 8% auto;
+    border-radius: 50%;
+}
+
+.info h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(71, 68, 68);
+}
+
+.info p {
+    margin: 18px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+@media(orientation: landscape){
+    .info img {
+        height: 40vw;
+        width: 40vw;
+    }
+}
+@media(min-width: 1024px) and (orientation: landscape){
+    .informations h1 {
+        font-size: 50px;
+    }
+
+    .info {
+        float: left;
+        width: 27%;
+        margin: 5% 3%;
+    }
+
+    .info img {
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .info h2 {
+        font-size: 28px;
+    }
+
+    .info p {
+        font-size: 24px;
+    }
+}
+@media(min-width: 1024px) and (orientation: portrait){
+    .informations h1 {
+        font-size: 60px;
+    }
+    .info h2 {
+        font-size: 34px;
+    }
+
+    .info p {
+        font-size: 26px;
+    }
+}
+
+/* < !--------------------- TREATMENTS SECTION -------------------------> */
+section.treatments {
+    background-color: #A69F46;
+    text-align: center;
+    padding: 5% 5% 15%;
+    color: rgb(41, 41, 41);
+}
+
+.treatments>h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 50px;
+}
+
+.treatment {
+    text-align: center;
+}
+
+.description h2 {
+    font-family: 'Saira Condensed';
+    letter-spacing: 1.3px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.description p {
+    margin: 10px 20px;
+    color: black;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.treatment>.photo {
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin: 30px auto;
+}
+
+.photo.stone {
+    background-image: url("img/stone.jpg");
+}
+
+.photo.swedish {
+    background-image: url("img/swedish.jpg");
+}
+
+.photo.foot {
+    background-image: url("img/foot.jpg");
+}
+
+.photo.deep {
+    background-image: url("img/Deep-Tissue-Massage.jpg");
+}
+@media(orientation: landscape){
+    .treatment>.photo {
+        height: 55vh;
+    }
+}
+@media(min-width: 1024px) and (orientation: landscape) {
+    .treatments>h1 {
+        font-size: 50px;
+    }
+
+    .treatment {
+        float: left;
+        padding: 30px;
+        width: 45%;
+        margin-left: 20px;
+    }
+
+    .treatment>.photo {
+        width: 90%;
+        height: 40vh;
+        background-size: cover;
+        background-position: center;
+        margin: 30px auto;
+    }
+
+    .treatment:nth-of-type(3),
+    .treatment:nth-of-type(4) {
+        border: none;
+    }
+    .description h2{
+        font-size: 28px;
+    }
+    .description p {
+        letter-spacing: 1px;
+        font-size: 24px;
+    }
+}
+@media(min-width: 1024px) and (orientation: portrait){
+    .treatment>.photo {
+        width: 100%;
+        height: 25vh;
+    }
+    .treatments>h1 {
+        font-size: 60px;
+    }
+    .description h2 {
+        font-size: 34px;
+    }
+    .description p {
+        font-size: 26px;
+    }
+}
+
+/* < !--------------------- BOOK AN APPOINTMENT SECTION -------------------------> */
+section.picture {
+    background-image: url("img/background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+div.background {
+    background-color: rgba(218, 111, 24, 0.3);
+    padding: 50px 10px;
+}
+
+div.background>h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+div.background>p {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+div.background>button {
+    font-size: 25px;
+    text-transform: uppercase;
+    border-style: hidden;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 30px;
+    background-color: rgba(112, 87, 66, 0.8);
+}
+
+div.background>button:hover {
+    background-color: rgba(51, 47, 44, 0.8);
+}
+
+@media(min-width: 1024px) and (orientation: landscape){
+    section.picture {
+        min-height: 80vh;
+    }
+
+    div.background {
+        min-height: 80vh;
+    }
+    div.background>h1 {
+        margin-top: 40px;
+    }
+
+    div.background>p {
+        font-size: 22px;
+        margin: 80px 150px;
+    }
+
+    div.background>button {
+        font-size: 30px;
+        width: 30%;
+        padding: 10px 0;
+    }
+}
+@media(min-width: 1024px) and (orientation: portrait){
+    section.picture {
+        min-height: 45vh;
+    }
+    div.background>h1 {
+        font-size: 46px;
+        margin-top: 50px;
+    }
+    div.background>p {
+        font-size: 28px;
+        margin: 80px 150px;
+    }
+}
+
+/* < !--------------------- CONTACT SECTION  -------------------------> */
+section.contact {
+    background-color: #BFA08E;
+    color: white;
+    padding: 5%;
+}
+
+.contact h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.wrap {
+    margin: 50px auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input,
+textarea,
+button {
+    margin: 5px;
+    width: 95%;
+    padding: 5px 0 5px 10px;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+button {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    letter-spacing: 1.2s;
+    font-family: 'Roboto';
+}
+
+.socials {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.social {
+    width: 90%;
+    padding: 10px;
+    text-align: left;
+}
+
+.social img {
+    width: 18%;
+}
+
+.social span {
+    vertical-align: 100%;
+    padding-left: 30px;
+}
+@media(orientation: landscape){
+    .social img {
+        width: 15%;
+    }
+    .social {
+        width: 68%;
+    }
+}
+
+@media(min-width: 1024px) {
+    form {
+        float: left;
+        width: 50%;
+    }
+
+    .socials {
+        float: left;
+        font-size: 22px;
+        width: 40%;
+        margin: 20px 0 0 100px;
+    }
+}
+@media(min-width: 1024px) and (orientation: portrait){
+    .socials {
+        width: 36%;
+    }
+}
+
+/* < !--------------------- FOOTER  -------------------------> */
+footer {
+    background-color: #BFBFBF;
+    padding: 15px;
+}
+
+footer p {
+    font-size: 18px; 
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+@media(min-width: 1024px) {
+    footer p {
+        font-size: 22px;
+    }
+}
